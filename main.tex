@@ -1,0 +1,126 @@
+%\documentclass[a4paper]{article}
+\documentclass[11pt,a4paper,twoside]{report}
+%style
+%\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+%%% text size %%%
+\setlength{\topmargin}{10mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\textheight}{262mm}
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{0mm}
+\setlength{\topskip}{0mm}
+\setlength{\oddsidemargin}{-1in} %  set real left margin 0pt
+\setlength{\evensidemargin}{-1in} % do
+\addtolength{\oddsidemargin}{25mm} % odd page 25mm left margin
+\addtolength{\evensidemargin}{15mm}% even page 15mm left margin
+\setlength{\textwidth}{170mm}
+%\setlength{\leftmargin}{-1 in}
+\usepackage{float} %figure placement
+%\pagestyle{fancy}
+%\lhead[\it \scriptsize \leftmark]{}
+%\chead[]{}
+%\rhead[]{\it \scriptsize \rightmark}
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\baselinestretch}{1.}
+%\doublespacing
+
+% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{subfig}
+\usepackage{amsmath,amssymb,amsfonts}
+
+%https://www.sharelatex.com/learn/Bibtex_bibliography_styles
+%\bibliographystyle{apacite}
+\bibliographystyle{alpha}
+%\usepackage{natbib, aas_macros}
+%\bibliographystyle{plainnat}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{comment}
+%for list/enumeration
+\usepackage{enumitem} 
+%for Japanese title
+%\usepackage{CJKutf8} 
+%for table
+\usepackage{multirow} 
+%\usepackage[colorinlistoftodos]{todonotes}
+%for bibliography
+%\usepackage{apacite}
+%indent first paragraph
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+
+%\title{Ground-based Observations of Rayleigh Scattering in the Atmosphere of Low Density Exoplanets}
+%(低密度太陽系外惑星の大気のレイリー散乱の地上観測)
+
+\title{
+  \Large{\bf Master's Course Thesis}\\[1.5cm]
+  \LARGE{\bf Multi-color Simultaneous Transit Observations \\
+of Low Density Hot Jupiters}\\[2cm]
+%\begin{CJK}{UTF8}{min}\LARGE{\bf 低密度ホットジュピターに対する多色同時トランジット観測}\end{CJK} \\
+}
+\date{\Large{\bf January 29, 2018}}
+
+\author{
+  \Large{\bf Jerome Pitogo de Leon}\\
+  \Large{\bf 35-166337}\\
+ %\begin{CJK}{UTF8}{min}\LARGE{ジェローム \; ピトゴ \; デレオン}
+ %\end{CJK}\\[1cm]
+  \Large{\bf Department of Astronomy}\\
+  \Large{\bf Graduate School of Science,
+  The University of Tokyo}\\
+ % \begin{CJK}{UTF8}{min}\LARGE{東京大学大学院理学系研究科}
+ % \end{CJK}\\
+}
+
+\begin{document}
+
+\maketitle
+%\thispagestyle{empty}\mbox{}\newpage
+
+\pagenumbering{roman}
+
+\include{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+%%% main chapters %%%
+% Empty pages are inserted to make each title page
+% come to the right-hand side (odd page) of the book.
+
+%%% page numbering %%%
+\pagenumbering{arabic}
+
+%---Intro
+\include{chap1_intro}
+%---Observation and Data Reduction
+\include{chap2_obs}
+%---Analysis and Results
+\include{chap3_analysis}
+%---Discussion
+\include{chap4_discussion}
+%---Summary, Conclusions, Future Work
+\include{chap5_summary}
+
+\chapter{Acknowledgements}
+%Tamura-sensei
+%John Livingston
+%Yui Kawashima
+%Norio Narita
+%Akihiko Fukui
+%insightful discussion with Stevanus
+I would like to express deep gratitude to my advisers Motohide Tamura and Norio Narita for over-all support and guidance. Special thanks also to John Livingston for motivating me to work on this study and Akihiko Fukui for giving assistance during observation and suggestions during data analysis. Finally, I would like to thank Yui Kawashima for for fruitful discussions and assistance in transmission spectrum modeling used in this work. %I also thank the panel for his/her careful reading and constructive comments, which helped improve this thesis. 
+
+\include{appendix}
+
+%---Other possible references
+\bibliography{references}
+
+%\end{CJK*}
+\end{document}
